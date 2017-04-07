@@ -1,0 +1,123 @@
+.mat-dialog-title{
+	margin: 0;
+}
+.multiple-title{
+	padding: 0 16px;
+}
+.chip-item-unselect.mat-chip:not(.mat-basic-chip){
+	background-color: #fff;
+    border: 1px solid #e0e0e0;
+}
+.chip-item{
+	margin: 8px;
+	text-align: center;
+	// transition:background-color 1s ease;
+
+
+	.selectedItem-close-over{
+		// background-color: #fff;
+		transition:opacity 1s ease;
+		opacity: 0;
+	}
+
+	.selectedItem-close-out{
+		transition:opacity 1s ease;
+		opacity: 0;
+	}
+
+}
+.chip-item:hover{
+	cursor: pointer;
+	
+	.chip-item-label{
+		left: 0;
+	}
+
+	.selectedItem-close-over{
+		opacity: 1;
+	}
+
+}
+.chip-item.mat-chip:not(.mat-basic-chip){
+	padding-right: 8px;
+}
+.chip-item-unselect.mat-chip.mat-chip-selected:not(.mat-basic-chip).mat-primary, .chip-item.mat-chip-selected:not(.mat-basic-chip).mat-primary{
+	background-color: #fff;
+    border: 1px solid #00bcd4;
+    color: #00bcd4;
+}
+.chip-item-label{
+	position: relative;
+	left: 8px;
+	transition: left .5s ease;
+}
+.selectedItem-close {
+	display: inline-block;
+	opacity: 0; 
+	// margin: -4px 0 -3px -16px;
+	margin: -4px 0 -3px 0;
+}
+
+
+// .selectedItem-close-over {
+// 	display: inline-block;
+// 	animation: animated-over 1s linear;
+// 	animation-fill-mode: forwards;
+// }
+// .selectedItem-close-out {
+// 	display: inline-block;
+// 	animation: animated-out .1s linear;
+// 	animation-fill-mode: forwards;
+// }
+// @keyframes animated-over {
+// 	from {
+// 		transform: rotate(0deg);
+// 		margin-left: -16px;
+// 	}
+// 	to {
+// 		transform: rotate(360deg);
+// 		margin-left: 10px;
+// 		opacity: 1;
+// 	}
+// }
+// @keyframes animated-out {
+// 	from {
+// 		transform: rotate(0deg);
+// 		margin-left: 10px;
+// 		opacity: 1;
+// 	}
+// 	to {
+// 		transform: rotate(-360deg);
+// 		margin-left: -16px;
+// 		opacity: 0;
+// 	}
+// }
+.multiple-dialog-contentContainer{
+	padding: 12px 0;
+}
+.multiple-dialog-actionsContainer{
+	position: relative;
+	padding: 24px 0;
+}
+.multiple-dialog-operate{
+	position: absolute;
+	right: 0;
+	margin: 9px 0;
+}
+.multiple-dialog-cancel{
+	margin-left: 20px;
+}
+.multiple-data-list{
+	padding-bottom: 30px;
+}
+.multiple-selected{
+	padding: 0 16px;
+	margin: 20px 0;
+	min-height: 30px;
+}
+.multiple-selected-item{
+	display: inline-block;
+}
+// .multiple-selected-item span{
+// 	margin-right: 20px;
+// }

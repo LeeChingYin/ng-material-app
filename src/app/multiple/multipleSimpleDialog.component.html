@@ -1,0 +1,35 @@
+<div md-dialog-title>
+	<md-input-container>
+		<input mdInput placeholder="请键入筛选项..." value="" [(ngModel)]="searchText"></md-input-container>
+	<span class="icon-close-mid pull-right md-dialog-title-close" (click)="mdDialogRef.close()"></span>
+</div>
+<div md-dialog-content class="multiple-dialog-contentContainer">
+	<div class="col-md-6">
+		<h3 class="multiple-title">请选择</h3>
+		<md-list>
+			<md-list-item *ngFor="let item of config.content | searchTextFilter: [searchText,config.assignFilterItem]">
+				<md-chip-list>
+					<md-chip class="chip-item-unselect" [selected]="item.selected" (click)="onToggle(item)">{{item[config.assignFilterItem]}}</md-chip>
+				</md-chip-list>
+			</md-list-item>
+		</md-list>
+	</div>
+	<div class="col-md-6">
+		<h3 class="multiple-title">已选项</h3>
+		<md-list>
+			<span *ngFor="let item of config.content">
+				<md-chip *ngIf="item.selected" [selected]="item.selected"  class="chip-item" hover (click)="cancleSelected(item)">
+					<span class="chip-item-label">{{item[config.assignFilterItem]}}</span> 
+					<i class="icon-close-cyan selectedItem-close" (click)="cancleSelected(item)"></i>
+				</md-chip>
+			</span>
+		</md-list>
+	</div>
+</div>
+<div md-dialog-actions class="multiple-dialog-actionsContainer">
+	<md-slide-toggle (change)="selectAll(slideToggleModel)" [(ngModel)]="slideToggleModel" [checked]="slideToggleModel">全选</md-slide-toggle>
+	<div class="multiple-dialog-operate">
+		<button md-raised-button color="primary" (click)="mdDialogRef.close()">{{ config.button || '确定' }}</button>
+		<button md-raised-button md-dialog-close class="multiple-dialog-cancel">取消</button>
+	</div>
+</div>

@@ -1,0 +1,126 @@
+<md-card class="multiple-example">
+	<md-card-title>多选列表Example</md-card-title>
+	<md-card-content>
+		<multiple [items]="listData" colsTitle="Title" keyArray="title" assignFilterItem="title"></multiple>
+	</md-card-content>
+	<md-card-title>使用方法：</md-card-title>
+	<md-card-content>
+		<h3>在标签中添加以下属性</h3>
+		<md-grid-list cols="2" rowHeight="50px">
+			<md-grid-tile>
+				<h2>参数</h2>
+			</md-grid-tile>
+			<md-grid-tile>
+				<h2>作用</h2>
+			</md-grid-tile>
+			<md-grid-tile>[items]</md-grid-tile>
+			<md-grid-tile>传入数据源</md-grid-tile>
+			<md-grid-tile>colsTitle</md-grid-tile>
+			<md-grid-tile>展示列表的表头，传入string，eg. colsTitle="Title,Name"</md-grid-tile>
+			<md-grid-tile>keyArray</md-grid-tile>
+			<md-grid-tile>展示列表的列项内容的属性，传入string，eg. keyArray="title,name"</md-grid-tile>
+			<md-grid-tile>assignFilterItem</md-grid-tile>
+			<md-grid-tile>
+				<ol>
+					<li>
+						searchText筛选的项，传入string，eg.数据源的属性为：title,name,number 假设输入searchText需要筛选的是Title,则assignFilterItem="title";
+					</li>
+					<li>同时为已选项的展示内容，assignFilterItem="title", 即设置已选项的展示为数据的title值。</li>
+				</ol>
+			</md-grid-tile>
+		</md-grid-list>
+	</md-card-content>
+</md-card>
+
+<md-card class="multiple-example">
+	<md-card-title>简单多选列表Example</md-card-title>
+	<md-card-content>
+		<multipleSimple [items]="datas" assignFilterItem="title"></multipleSimple>
+	</md-card-content>
+	<md-card-title>使用方法</md-card-title>
+	<md-card-content>
+		<h3>在标签中添加以下属性</h3>
+		<md-grid-list cols="2" rowHeight="80px">
+			<md-grid-tile>
+				<h2>参数</h2>
+			</md-grid-tile>
+			<md-grid-tile>
+				<h2>作用</h2>
+			</md-grid-tile>
+			<md-grid-tile>[items]</md-grid-tile>
+			<md-grid-tile>传入数据源</md-grid-tile>
+			<md-grid-tile>assignFilterItem</md-grid-tile>
+			<md-grid-tile>
+				<ol>
+					<li>
+						searchText筛选的项，传入string，eg.数据源的属性为：title,name,number 假设输入searchText需要筛选的是Title,则assignFilterItem="title";
+					</li>
+					<li>展示列表的内容</li>
+					<li>已选项的展示内容，assignFilterItem="title", 即设置已选项的展示为数据的title值。</li>
+				</ol>
+			</md-grid-tile>
+		</md-grid-list>
+	</md-card-content>
+</md-card>
+<md-card class="multiple-example">
+	<md-card-title>多选Dialog Example</md-card-title>
+	<md-card-content>
+		<button md-raised-button (click)="openDialog(['Title'], ['title'],'title')">Open dialog</button>
+	</md-card-content>
+	<md-card-title>使用方法</md-card-title>
+	<md-card-content>
+		<h3>Step1:在标签中添加方法，并传入参数</h3>
+		<md-grid-list cols="2" rowHeight="80px">
+			<md-grid-tile>
+				<h2>参数</h2>
+			</md-grid-tile>
+			<md-grid-tile>
+				<h2>作用</h2>
+			</md-grid-tile>
+			<md-grid-tile>arg1</md-grid-tile>
+			<md-grid-tile>展示列表的表头，传入Array，eg. ['Title']</md-grid-tile>
+			<md-grid-tile>arg2</md-grid-tile>
+			<md-grid-tile>展示列表的列项内容的属性，传入Array，eg. ['title']</md-grid-tile>
+			<md-grid-tile>arg3</md-grid-tile>
+			<md-grid-tile>
+				<ol>
+					<li>
+						searchText筛选的项，传入string，eg.
+		eg.数据源的属性为：title,name,number 假设输入searchText需要筛选的是Title,则'title';
+					</li>
+					<li>同时为已选项的展示内容，如例子，即设置已选项的展示为数据的title值。</li>
+				</ol>
+			</md-grid-tile>
+		</md-grid-list>
+		<h3>Step2:在对应的ts,定义相应的方法</h3>
+	</md-card-content>
+</md-card>
+<md-card class="multiple-example">
+	<md-card-title>简单多选Dialog Example</md-card-title>
+	<md-card-content>
+		<button md-raised-button (click)="openSimpleDialog('title')">Open Simple dialog</button>
+	</md-card-content>
+	<md-card-title>使用方法</md-card-title>
+	<md-card-content>
+		<h3>Step1:在标签中添加以下属性</h3>
+		<md-grid-list cols="2" rowHeight="80px">
+			<md-grid-tile>
+				<h2>参数</h2>
+			</md-grid-tile>
+			<md-grid-tile>
+				<h2>作用</h2>
+			</md-grid-tile>
+			<md-grid-tile>arg1</md-grid-tile>
+			<md-grid-tile>
+				<ol>
+					<li>
+						searchText筛选的项，传入string，eg.数据源的属性为：title,name,number 假设输入searchText需要筛选的是Title,则assignFilterItem="title";
+					</li>
+					<li>展示列表的内容</li>
+					<li>已选项的展示内容，assignFilterItem="title", 即设置已选项的展示为数据的title值。</li>
+				</ol>
+			</md-grid-tile>
+		</md-grid-list>
+		<h3>Step2:在对应的ts,定义相应的方法</h3>
+	</md-card-content>
+</md-card>

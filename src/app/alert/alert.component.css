@@ -1,0 +1,11 @@
+.alertSuccess{
+  background: #009688 !important;
+}
+
+.alertWarning{
+  background: #FDD835 !important;
+}
+
+.alertFail{
+  background: #E53935 !important;
+}

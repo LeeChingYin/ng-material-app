@@ -1,0 +1,13 @@
+.icon{
+	display: inline-block;
+	background-repeat: no-repeat;
+}
+.icon-default{
+	@extend .icon;
+	width: 16px;
+	height: 16px;
+}
+.icon-close-cyan{
+	@extend .icon-default;
+	background-image: url(../assets/icon/close_cyan.svg);
+}
