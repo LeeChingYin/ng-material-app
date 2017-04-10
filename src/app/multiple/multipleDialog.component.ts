@@ -1,6 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MdDialogRef } from '@angular/material';
-// import { KeysPipe } from '../../pipes/key.pipe';
+import {MD_DIALOG_DATA} from '@angular/material';
+
 
 
 @Component({
@@ -13,8 +14,8 @@ export class MultipleDialogComponent implements OnInit {
 	config: {};
 	slideToggleModel: boolean;
 	// keyNameArray: any;
-	constructor(private mdDialogRef: MdDialogRef<MultipleDialogComponent>) {
-		this.config = mdDialogRef.config.data || {};
+	constructor(private mdDialogRef: MdDialogRef<MultipleDialogComponent>, @Inject(MD_DIALOG_DATA) data: any) {
+        this.config = data;
 		this.setSelectedAll();
 		// this.keyNameArray = KeysPipe.prototype.transform(this.config.content);
 	}

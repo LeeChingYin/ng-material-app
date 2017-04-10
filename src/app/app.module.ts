@@ -15,6 +15,8 @@ import { MultipleSimpleDialogComponent } from './multiple/multipleSimpleDialog.c
 import { MultipleDialogComponent } from './multiple/multipleDialog.component';
 import { MultipleExampleComponent } from './multiple/multiple-example.component';
 import { SearchTextFilter } from './shared/pipes/search-text.pipe';
+// directive
+import { HoverDirective } from './shared/directives/hover.directive';
 
 @NgModule({
     declarations: [
@@ -27,7 +29,8 @@ import { SearchTextFilter } from './shared/pipes/search-text.pipe';
         MultipleSimpleDialogComponent,
         MultipleDialogComponent,
         MultipleExampleComponent,
-        SearchTextFilter
+        SearchTextFilter,
+        HoverDirective
     ],
     imports: [
         BrowserModule,

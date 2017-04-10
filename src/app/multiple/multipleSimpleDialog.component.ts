@@ -1,5 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MdDialogRef } from '@angular/material';
+import {MD_DIALOG_DATA} from '@angular/material';
 
 
 @Component({
@@ -11,8 +12,8 @@ import { MdDialogRef } from '@angular/material';
 export class MultipleSimpleDialogComponent implements OnInit {
 	config: {};
 	slideToggleModel: boolean;
-	constructor(private mdDialogRef: MdDialogRef<MultipleSimpleDialogComponent>) {
-		this.config = mdDialogRef.config.data || {};
+	constructor(private mdDialogRef: MdDialogRef<MultipleSimpleDialogComponent>, @Inject(MD_DIALOG_DATA) data: any) {
+        this.config = data;
 		this.setSelectedAll();
 	}
 

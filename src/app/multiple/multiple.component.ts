@@ -1,5 +1,4 @@
 import { Component, OnInit, HostListener, Input } from '@angular/core';
-// import { KeysPipe } from '../../pipes/key.pipe';
 
 
 @Component({
