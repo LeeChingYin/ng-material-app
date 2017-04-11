@@ -43,7 +43,9 @@ import { HoverDirective } from './shared/directives/hover.directive';
     bootstrap: [AppComponent],
     entryComponents: [
         ConfirmDialogComponent,
-        DialogExampleComponent
+        DialogExampleComponent,
+        MultipleSimpleDialogComponent,
+        MultipleDialogComponent
     ]
 })
 export class AppModule { }

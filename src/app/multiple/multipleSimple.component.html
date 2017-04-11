@@ -20,8 +20,7 @@
 		<md-list>
 			<span *ngFor="let item of items">
 				<md-chip *ngIf="item.selected" [selected]="item.selected"  class="chip-item" hover (click)="cancleSelected(item)">
-					<span class="chip-item-label">{{item[assignFilterItem]}}</span>
-					 <i class="icon-close-cyan selectedItem-close"></i>
+					<span class="chip-item-label">{{item[assignFilterItem]}}</span> <i class="icon-close-cyan selectedItem-close"></i>
 				</md-chip>
 			</span>
 		</md-list>

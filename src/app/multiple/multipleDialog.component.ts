@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MdDialogRef } from '@angular/material';
-import {MD_DIALOG_DATA} from '@angular/material';
+import { MD_DIALOG_DATA } from '@angular/material';
 
 
 
@@ -13,16 +13,13 @@ import {MD_DIALOG_DATA} from '@angular/material';
 export class MultipleDialogComponent implements OnInit {
 	config: {};
 	slideToggleModel: boolean;
-	// keyNameArray: any;
 	constructor(private mdDialogRef: MdDialogRef<MultipleDialogComponent>, @Inject(MD_DIALOG_DATA) data: any) {
-        this.config = data;
+		this.config = data;
 		this.setSelectedAll();
-		// this.keyNameArray = KeysPipe.prototype.transform(this.config.content);
 	}
 
 	// 设置全选状态
-	private setSelectedAll = function () {
-		// console.log(this.config.content);
+	private setSelectedAll = function() {
 		// 全选
 		let data = this.config.content;
 		let count = 0;
@@ -42,21 +39,24 @@ export class MultipleDialogComponent implements OnInit {
 
 	}
 
+	// 选中，反选
 	onToggle(item) {
 		item.checked = !item.checked;
 
 		this.setSelectedAll();
 	}
 
+	// 在已选项列表中取消选中
 	cancleSelected(item) {
 		item.checked = false;
 
 		this.setSelectedAll();
 	}
 
+	// 全选
 	selectAll(checked) {
-		let data:any = this.config;
-		let dataContent:any = data.content;
+		let data: any = this.config;
+		let dataContent: any = data.content;
 		console.log(dataContent);
 		if (checked) {
 			for (let i in dataContent) {
@@ -68,7 +68,5 @@ export class MultipleDialogComponent implements OnInit {
 			}
 		}
 	}
-
-
 }
 

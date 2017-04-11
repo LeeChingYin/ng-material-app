@@ -10,14 +10,12 @@ export class MultipleSimpleComponent implements OnInit {
 
 	public ngOnInit() { }
 
-	// items = [{ title: 'hello world', name:'1' }, { title: 'hello kitty' }, { title: 'foo bar' },{ title: 'hello world', name:'1' }, { title: 'hello kitty' }, { title: 'foo bar' },{ title: 'hello world', name:'1' }, { title: 'hello kitty' }, { title: 'foo bar' }];
-
 	@Input() items: any = {};
 	@Input() assignFilterItem: string;
 	slideToggleModel: boolean;
 
 	// 设置全选状态
-	private setSelectedAll = function () {
+	private setSelectedAll = function() {
 		// 全选
 		let data = this.items;
 		let count = 0;
@@ -34,17 +32,21 @@ export class MultipleSimpleComponent implements OnInit {
 		}
 	}
 
+	// 选中，反选
 	onToggle(item) {
 		item.selected = !item.selected;
 
 		this.setSelectedAll();
 	}
 
+	// 在已选项列表中取消选中
 	cancleSelected(item) {
 		item.selected = false;
 
 		this.setSelectedAll();
 	}
+	
+	// 全选
 	selectAll(checked) {
 		var data = this.items;
 

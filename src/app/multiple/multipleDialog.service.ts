@@ -2,7 +2,7 @@ import { Component, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
 import { MdDialog, MdDialogRef, MdDialogConfig } from '@angular/material';
 import { MultipleDialogComponent } from './multipleDialog.component';
-import {Observable} from 'rxjs/Observable';
+import { Observable } from 'rxjs/Observable';
 
 
 export class MultipleDialogService {
@@ -22,8 +22,7 @@ export class MultipleDialogService {
 	public setMultipleData(contentOrConfig: any, title?: string): Observable<any> {
 		let config = new MdDialogConfig();
 		config = {
-			width: '700px',
-			// height: '200px'
+			width: '700px'
 		};
 		if (contentOrConfig instanceof Object) {
 			config.data = contentOrConfig;

@@ -22,10 +22,8 @@
 		<h2 class="multiple-title">已选项</h2>
 		<div class="multiple-selected">
 			<div class="multiple-selected-item" *ngFor="let item of config.content">
-				<!-- <span *ngIf="item.checked">{{item[config.assignFilterItem]}}</span> -->
 				<md-chip *ngIf="item.checked" [selected]="item.checked"  class="chip-item" hover (click)="cancleSelected(item)">
-					<span class="chip-item-label">{{item[config.assignFilterItem]}}</span>
-					 <i class="icon-close-cyan selectedItem-close"></i>
+					<span class="chip-item-label">{{item[config.assignFilterItem]}}</span> <i class="icon-close-cyan selectedItem-close"></i>
 				</md-chip>
 			</div>
 		</div>

@@ -9,7 +9,9 @@
 			<md-grid-tile>
 				<md-slide-toggle (change)="selectAll(slideToggleModel)" [(ngModel)]="slideToggleModel" [checked]="slideToggleModel">全选</md-slide-toggle>
 			</md-grid-tile>
-			<md-grid-tile class="text-center" *ngFor="let title of colsTitle"><h3>{{title}}</h3></md-grid-tile>
+			<md-grid-tile class="text-center" *ngFor="let title of colsTitle">
+				<h3>{{title}}</h3>
+			</md-grid-tile>
 			<div *ngFor="let item of items | searchTextFilter: [searchText, assignFilterItem]">
 				<md-grid-tile>
 					<md-checkbox (change)="onToggle(item)" [checked]="item.checked"></md-checkbox>
@@ -22,10 +24,8 @@
 		<h2 class="multiple-title">已选项</h2>
 		<div class="multiple-selected">
 			<div class="multiple-selected-item" *ngFor="let item of items">
-				<!-- <span *ngIf="item.checked">{{item[assignFilterItem]}}</span> -->
 				<md-chip *ngIf="item.checked" [selected]="item.checked"  class="chip-item" hover (click)="cancleSelected(item)">
-					<span class="chip-item-label">{{item[assignFilterItem]}}</span>
-					 <i class="icon-close-cyan selectedItem-close"></i>
+					<span class="chip-item-label">{{item[assignFilterItem]}}</span> <i class="icon-close-cyan selectedItem-close"></i>
 				</md-chip>
 			</div>
 		</div>

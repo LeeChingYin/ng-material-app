@@ -19,8 +19,7 @@
 		<md-list>
 			<span *ngFor="let item of config.content">
 				<md-chip *ngIf="item.selected" [selected]="item.selected"  class="chip-item" hover (click)="cancleSelected(item)">
-					<span class="chip-item-label">{{item[config.assignFilterItem]}}</span> 
-					<i class="icon-close-cyan selectedItem-close" (click)="cancleSelected(item)"></i>
+					<span class="chip-item-label">{{item[config.assignFilterItem]}}</span> <i class="icon-close-cyan selectedItem-close" (click)="cancleSelected(item)"></i>
 				</md-chip>
 			</span>
 		</md-list>

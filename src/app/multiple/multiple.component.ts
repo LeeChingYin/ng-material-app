@@ -8,25 +8,23 @@ import { Component, OnInit, HostListener, Input } from '@angular/core';
 })
 
 export class MultipleComponent implements OnInit {
-	
+
 	@Input() items: any = {};
 	@Input() colsTitle: any;
 	@Input() keyArray: any;
-	@Input() assignFilterItem:string;
 
-	// keyNameArray: any;
+	@Input() assignFilterItem: string;
 
-	constructor(){
+	constructor() {
 	}
-
 
 	public ngOnInit() {
 		this.keyArray = this.keyArray.split(",");
 		this.colsTitle = this.colsTitle.split(",");
 	}
 
-		// 设置全选状态
-	private setSelectedAll = function () {
+	// 设置全选状态
+	private setSelectedAll = function() {
 		// 全选
 		let data = this.items;
 		let count = 0;
@@ -43,18 +41,21 @@ export class MultipleComponent implements OnInit {
 		}
 	}
 
+	// 选中，反选
 	onToggle(item) {
 		item.checked = !item.checked;
 
 		this.setSelectedAll();
 	}
 
+	// 在已选项列表中取消选中
 	cancleSelected(item) {
 		item.checked = false;
 
 		this.setSelectedAll();
 	}
 
+	// 全选
 	selectAll(checked) {
 
 		var data = this.items;
@@ -69,7 +70,5 @@ export class MultipleComponent implements OnInit {
 			}
 		}
 	}
-
-
 
 }

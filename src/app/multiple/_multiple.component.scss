@@ -57,41 +57,6 @@
 	// margin: -4px 0 -3px -16px;
 	margin: -4px 0 -3px 0;
 }
-
-
-// .selectedItem-close-over {
-// 	display: inline-block;
-// 	animation: animated-over 1s linear;
-// 	animation-fill-mode: forwards;
-// }
-// .selectedItem-close-out {
-// 	display: inline-block;
-// 	animation: animated-out .1s linear;
-// 	animation-fill-mode: forwards;
-// }
-// @keyframes animated-over {
-// 	from {
-// 		transform: rotate(0deg);
-// 		margin-left: -16px;
-// 	}
-// 	to {
-// 		transform: rotate(360deg);
-// 		margin-left: 10px;
-// 		opacity: 1;
-// 	}
-// }
-// @keyframes animated-out {
-// 	from {
-// 		transform: rotate(0deg);
-// 		margin-left: 10px;
-// 		opacity: 1;
-// 	}
-// 	to {
-// 		transform: rotate(-360deg);
-// 		margin-left: -16px;
-// 		opacity: 0;
-// 	}
-// }
 .multiple-dialog-contentContainer{
 	padding: 12px 0;
 }
@@ -103,6 +68,9 @@
 	position: absolute;
 	right: 0;
 	margin: 9px 0;
+}
+.mat-dialog-actions:last-child{
+	margin-bottom: 15px;
 }
 .multiple-dialog-cancel{
 	margin-left: 20px;
@@ -118,6 +86,3 @@
 .multiple-selected-item{
 	display: inline-block;
 }
-// .multiple-selected-item span{
-// 	margin-right: 20px;
-// }

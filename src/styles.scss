@@ -11,3 +11,23 @@
 	@extend .icon-default;
 	background-image: url(assets/close_cyan.svg);
 }
+.clearfix:after{
+	content: "\20";
+	clear: both;
+	height: 0;
+	display: block;
+	overflow: hidden;
+	zoom: 1;
+}
+.col-md-2{
+	float: left;
+	width: 16.67%;
+}
+.col-md-3{
+	float: left;
+	width: 33.33%;
+}
+.col-md-6{
+	float: left;
+	width: 50%;
+}
